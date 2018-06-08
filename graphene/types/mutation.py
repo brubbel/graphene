@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
 from ..utils.deprecated import warn_deprecation
-from ..utils.get_unbound_function import get_unbound_function
+from six import get_unbound_function
 from ..utils.props import props
 from .field import Field
 from .objecttype import ObjectType, ObjectTypeOptions

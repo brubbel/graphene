@@ -18,7 +18,7 @@ from graphql.execution.executor import get_default_resolve_type_fn
 from graphql.type import GraphQLEnumValue
 from graphql.type.typemap import GraphQLTypeMap
 
-from ..utils.get_unbound_function import get_unbound_function
+from six import get_unbound_function
 from ..utils.str_converters import to_camel_case
 from .definitions import (
     GrapheneEnumType,
