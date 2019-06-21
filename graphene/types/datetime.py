@@ -68,6 +68,11 @@ class DateTime(Scalar):
             elif isinstance(value, string_types):
                 return parse_datetime(value)
         except ValueError:
+            pass
+        try:
+            date = parse_date(value)
+            return datetime.datetime.combine(date, datetime.time.min)
+        except ValueError:
             return None
 
 
